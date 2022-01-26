@@ -17,14 +17,12 @@ export default function App() {
     <>
       {/** Link is Secondary */}
 
-      {preLoginList.includes(location.pathname) && (
+      {preLoginList.includes(location.pathname) ? (
         <div>
           <Link to="/login">Login | </Link>
           <Link to="/register">Register |</Link>
         </div>
-      )}
-
-      {!preLoginList.includes(location.pathname) && (
+      ) : (
         <div>
           <Link to="/welcome-home">Home | </Link>
           <Link to="/welcome-home">Expore | </Link>
