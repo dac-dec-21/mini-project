@@ -19,6 +19,7 @@ function Hello() {
   // React Hooks,
   // useState :: it works with DOM internally.
   let [counter1, setCounter1] = useState(1000);
+
   const like1 = () => {
     const newCounter1 = counter1 + 1;
     setCounter1(newCounter1);
