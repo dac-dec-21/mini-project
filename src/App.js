@@ -1,4 +1,12 @@
-import { Accordion, Alert, Button, Card, Carousel } from "react-bootstrap";
+import { useState } from "react";
+import {
+  Accordion,
+  Alert,
+  Button,
+  Card,
+  Carousel,
+  Modal,
+} from "react-bootstrap";
 
 export default function App() {
   return (
@@ -42,6 +50,8 @@ export default function App() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      <Example />
 
       {/** Cards */}
       <h1>Cards Demo</h1>
@@ -124,5 +134,49 @@ export default function App() {
       {/** React Bootstrap */}
       <Alert variant="primary">Lorem ipsum dolor sit amet consectetur.</Alert>
     </div>
+  );
+}
+
+function Example() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose} centered={true}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aliquid
+          sit adipisci, possimus amet itaque facilis magnam sapiente eligendi,
+          officia assumenda praesentium dolores a ad? Ea, perferendis.
+          Necessitatibus, quos excepturi? Dolores debitis iste eaque! Laudantium
+          dolorum amet, dolores doloremque voluptatem consectetur iure
+          cupiditate nostrum reprehenderit ipsam nisi hic enim minima assumenda
+          at suscipit aliquid corporis et? Consectetur adipisci dolorem
+          provident quis, temporibus totam dolores nisi qui, voluptatem libero
+          deserunt molestias, nam est iste distinctio minima tenetur aut quaerat
+          rem at. Repellat corporis rerum natus? Atque corporis exercitationem
+          rerum doloribus. Sapiente asperiores officiis saepe quis tempore harum
+          aliquid quasi nostrum nesciunt rem, aut et est delectus illo porro
+          eos.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
