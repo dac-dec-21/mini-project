@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function HeaderNavigation() {
   let navigate = useNavigate();
@@ -17,10 +17,18 @@ export default function HeaderNavigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link onClick={navHome}>Home</Nav.Link>
-            <Nav.Link onClick={navExplore}>Explore</Nav.Link>
-            <Nav.Link onClick={navMessage}>Messages</Nav.Link>
-            <Nav.Link onClick={navNotification}>Notification</Nav.Link>
+            <Nav.Link as={Link} to="/welcome-home">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/explore">
+              Explore
+            </Nav.Link>
+            <Nav.Link as={Link} to="/messages">
+              Messages
+            </Nav.Link>
+            <Nav.Link as={Link} to="/notification">
+              Notification
+            </Nav.Link>
             <Nav.Link onClick={logout}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
