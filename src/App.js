@@ -3,34 +3,84 @@ import { useState } from "react";
 export default function App() {
   return (
     <div>
-      <Hello />
+      <Page1 />
+      <Page2 />
     </div>
   );
 }
 
-function Hello() {
-  const [username, setUsername] = useState("rohit");
-  const [password, setPassword] = useState("");
-
-  const handleUsername = (e) => {
-    const newusername = e.target.value;
-    setUsername(newusername);
-  };
-
-  const handlePassword = (e) => {
-    const newpassword = e.target.value;
-    setPassword(newpassword);
-  };
-
+function Page1() {
   return (
     <div>
-      <input type="text" value={username} onChange={handleUsername} />
-      <input type="password" value={password} onChange={handlePassword} />
+      <h1>Page 1</h1>
+      <p>
+        Page1 ki kahana, Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Tempora quos, laborum magni fuga repellendus accusamus incidunt
+        voluptates dolorem quas tenetur excepturi consequatur laudantium aut
+        dicta aliquid consectetur. Excepturi ab mollitia dolore obcaecati
+        suscipit nisi eius, eos voluptate consectetur iusto fugit quo, aliquid
+        sint consequatur dolores ducimus magni, qui eligendi! Mollitia at
+        explicabo blanditiis doloribus deserunt exercitationem illo dicta nisi a
+        earum, fugiat culpa optio eius repellendus laborum dolorem rerum. Nam,
+        nostrum ipsa laudantium nihil eos iusto corporis, saepe ea voluptates
+        voluptate aspernatur eius iste placeat harum reiciendis alias velit
+        voluptatem ut? Ut non itaque excepturi sapiente repellat perferendis
+        pariatur eos! Page1 ki kahana, Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Tempora quos, laborum magni fuga repellendus accusamus
+        incidunt voluptates dolorem quas tenetur excepturi consequatur
+        laudantium aut dicta aliquid consectetur. Excepturi ab mollitia dolore
+        obcaecati suscipit nisi eius, eos voluptate consectetur iusto fugit quo,
+        aliquid sint consequatur dolores ducimus magni, qui eligendi! Mollitia
+        at explicabo blanditiis doloribus deserunt exercitationem illo dicta
+        nisi a earum, fugiat culpa optio eius repellendus laborum dolorem rerum.
+        Nam, nostrum ipsa laudantium nihil eos iusto corporis, saepe ea
+        voluptates voluptate aspernatur eius iste placeat harum reiciendis alias
+        velit voluptatem ut? Ut non itaque excepturi sapiente repellat
+        perferendis pariatur eos!
+      </p>
+    </div>
+  );
+}
 
-      <h1>
-        {username} {password}
-      </h1>
-      <hr />
+function Page2() {
+  return (
+    <div>
+      <h1>Page 2</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+        molestias iste nam impedit, quasi ipsam doloremque accusantium vel
+        possimus quaerat, eos quisquam? Enim asperiores excepturi rerum
+        assumenda placeat corporis dolorum earum sit temporibus. Suscipit ex
+        quibusdam fugit cupiditate exercitationem, provident atque cum laborum
+        quas voluptatem consequatur libero quos molestias, excepturi accusamus
+        quidem reiciendis? Eveniet nostrum doloremque nam sint sapiente magnam
+        est distinctio dolorum numquam minima praesentium saepe commodi, nulla
+        perferendis expedita a, laborum hic dolor, consectetur ea. Reiciendis
+        nihil est sequi placeat soluta omnis excepturi natus blanditiis
+        repudiandae, magni eligendi. Est et error aliquam libero illo beatae
+        voluptate nam, fugit fuga! Et quod dolor placeat minus vel error
+        voluptates cupiditate facere doloremque porro amet sunt aliquam nam
+        exercitationem illum quidem sed doloribus at fugit iusto officiis, eius
+        neque. Sed saepe ipsum nesciunt accusantium maiores libero ea quidem
+        nostrum perspiciatis necessitatibus impedit aut, aliquam error, mollitia
+        incidunt delectus inventore quis dolorem. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Tenetur molestias iste nam impedit, quasi
+        ipsam doloremque accusantium vel possimus quaerat, eos quisquam? Enim
+        asperiores excepturi rerum assumenda placeat corporis dolorum earum sit
+        temporibus. Suscipit ex quibusdam fugit cupiditate exercitationem,
+        provident atque cum laborum quas voluptatem consequatur libero quos
+        molestias, excepturi accusamus quidem reiciendis? Eveniet nostrum
+        doloremque nam sint sapiente magnam est distinctio dolorum numquam
+        minima praesentium saepe commodi, nulla perferendis expedita a, laborum
+        hic dolor, consectetur ea. Reiciendis nihil est sequi placeat soluta
+        omnis excepturi natus blanditiis repudiandae, magni eligendi. Est et
+        error aliquam libero illo beatae voluptate nam, fugit fuga! Et quod
+        dolor placeat minus vel error voluptates cupiditate facere doloremque
+        porro amet sunt aliquam nam exercitationem illum quidem sed doloribus at
+        fugit iusto officiis, eius neque. Sed saepe ipsum nesciunt accusantium
+        maiores libero ea quidem nostrum perspiciatis necessitatibus impedit
+        aut, aliquam error, mollitia incidunt delectus inventore quis dolorem.
+      </p>
     </div>
   );
 }
