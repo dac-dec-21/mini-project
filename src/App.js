@@ -1,22 +1,39 @@
+import { useState } from "react";
+
 export default function App() {
   return (
     <div>
       <Hello />
-      <Hello name="rahul" />
-      <Hello id="2" name="virat" />
     </div>
   );
 }
 
-/*function Hello() {
-  return <h1>Hello!  </h1>;
-}*/
+function Hello() {
+  let counter = 1000;
+  const like = () => {
+    counter++;
+    console.log(counter);
+  };
 
-/*function Hello(p1) {
-  return <h1>Hello! {p1.name} </h1>;
-}*/
+  // RHS ::  SPECIAL FUNCTION :: startWith, prefix useState, useEffect
+  // React Hooks,
+  // useState :: it works with DOM internally.
+  let [counter1, setCounter1] = useState(1000);
+  const like1 = () => {
+    const newCounter1 = counter1 + 1;
+    setCounter1(newCounter1);
+  };
 
-// with descruting
-function Hello({ name, id }) {
-  return <h1>Hello! {name} </h1>;
+  return (
+    <div>
+      <h1>
+        Counter : {counter}
+        <button onClick={like}>LIKE</button>
+      </h1>
+      <h1>
+        Counter1 : {counter1}
+        <button onClick={like1}>LIKE1</button>
+      </h1>
+    </div>
+  );
 }
