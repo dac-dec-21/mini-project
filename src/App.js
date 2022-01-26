@@ -16,7 +16,6 @@ export default function App() {
   return (
     <>
       {/** Link is Secondary */}
-
       {preLoginList.includes(location.pathname) ? (
         <div>
           <Link to="/login">Login | </Link>
@@ -25,8 +24,8 @@ export default function App() {
       ) : (
         <div>
           <Link to="/welcome-home">Home | </Link>
-          <Link to="/welcome-home">Expore | </Link>
-          <Link to="/welcome-home">Messages </Link>
+          <Link to="/explore">Expore | </Link>
+          <Link to="/messages">Messages </Link>
         </div>
       )}
 
@@ -36,8 +35,8 @@ export default function App() {
         <Route path="/register" element={<Register />} />
 
         <Route path="/welcome-home" element={<WelcomeHome />} />
-        <Route path="/explore" element={<WelcomeHome />} />
-        <Route path="/messages" element={<WelcomeHome />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/messages" element={<Messages />} />
       </Routes>
     </>
   );
@@ -87,4 +86,12 @@ function WelcomeHome() {
       <button onClick={signOut}>Sign Out</button>
     </div>
   );
+}
+
+function Explore() {
+  return <h1>Explore Page</h1>;
+}
+
+function Messages() {
+  return <h1>Messages Page</h1>;
 }
