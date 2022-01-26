@@ -14,7 +14,7 @@ export default function Login() {
         className="row bg-dark align-items-center justify-content-center "
         style={{ height: "100vh" }}
       >
-        <div className="col-6 bg-secondary p-4">
+        <div className="col-12 col-md-6  bg-secondary p-4">
           <form>
             <div className="alert alert-dark h2">Application Login Form</div>
 

@@ -7,7 +7,7 @@ export default function Register() {
         className="row bg-dark justify-content-center align-items-center"
         style={{ height: "100vh" }}
       >
-        <div className="col-6 bg-secondary p-4 rounded">
+        <div className="col-12 col-md-6 bg-secondary p-4 rounded">
           <form>
             <div className="alert alert-dark h2">Registration Form</div>
 
