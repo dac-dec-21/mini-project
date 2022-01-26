@@ -9,14 +9,28 @@ export default function App() {
 }
 
 function Hello() {
-  const [counter] = useState(1);
-  const [counter1] = useState(100.0);
-  const [active] = useState(true);
-  const [user] = useState({ id: 1, name: "rohit" });
+  const [username, setUsername] = useState("rohit");
+  const [password, setPassword] = useState("");
+
+  const handleUsername = (e) => {
+    const newusername = e.target.value;
+    setUsername(newusername);
+  };
+
+  const handlePassword = (e) => {
+    const newpassword = e.target.value;
+    setPassword(newpassword);
+  };
 
   return (
     <div>
-      <h1>{user.name}</h1>
+      <input type="text" value={username} onChange={handleUsername} />
+      <input type="password" value={password} onChange={handlePassword} />
+
+      <h1>
+        {username} {password}
+      </h1>
+      <hr />
     </div>
   );
 }
