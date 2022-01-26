@@ -9,32 +9,14 @@ export default function App() {
 }
 
 function Hello() {
-  let counter = 1000;
-  const like = () => {
-    counter++;
-    console.log(counter);
-  };
-
-  // RHS ::  SPECIAL FUNCTION :: startWith, prefix useState, useEffect
-  // React Hooks,
-  // useState :: it works with DOM internally.
-  let [counter1, setCounter1] = useState(1000);
-
-  const like1 = () => {
-    const newCounter1 = counter1 + 1;
-    setCounter1(newCounter1);
-  };
+  const [counter] = useState(1);
+  const [counter1] = useState(100.0);
+  const [active] = useState(true);
+  const [user] = useState({ id: 1, name: "rohit" });
 
   return (
     <div>
-      <h1>
-        Counter : {counter}
-        <button onClick={like}>LIKE</button>
-      </h1>
-      <h1>
-        Counter1 : {counter1}
-        <button onClick={like1}>LIKE1</button>
-      </h1>
+      <h1>{user.name}</h1>
     </div>
   );
 }
